@@ -1,0 +1,28 @@
+.work {
+    background: url(../../img/bg/bg-video.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+.play-video {
+    width: 82px;
+    height: 118px;
+    opacity: 0.9;
+    position: absolute;
+}

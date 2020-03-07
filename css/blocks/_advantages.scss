@@ -1,0 +1,80 @@
+.advantages {
+    background: url("../../img/bg/bg-best.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(27px);
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.advantages__item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include phones {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+.advantages__title {
+    font-family: Lifehack;
+    font-size: rem(24px);
+    font-weight: 500;
+    text-align: center;
+    margin-top: rem(34px);
+
+    @include phones {
+        text-align: left;
+    }
+}
+
+.advantages__text {
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: 1.47em;
+    opacity: 0.8;
+    margin-top: rem(20px);
+    text-align: center;
+
+    @include phones {
+        text-align: left;
+    }
+}
+
+.advantages__desc {
+    @include phones {
+        margin-left: 5%;
+    }
+}
+
+.meat,
+.hand,
+.natural {
+    width: rem(95px);
+    height: rem(90px);
+
+    @include phones {
+        width: 11.9375rem;
+    }
+}

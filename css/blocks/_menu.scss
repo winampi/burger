@@ -1,0 +1,82 @@
+.menu {
+    background: url(../../img/bg/bg-menu.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    padding-left: 8rem;
+    padding-top: 8rem;
+    position: relative;
+
+    @include phones {
+        padding: 15% 2% 2% 5%;
+    }
+
+    @include tablets {
+        padding: 10% 2% 5% 5%;
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+    }
+
+    &__item {
+        height: 100%;
+        display: flex;
+    }
+
+    &__trigger {
+        &:before {
+            content: "";
+            position: absolute;
+            background: rgba(0, 0, 0, .8);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        display: flex;
+        justify-content: center;
+        width: rem(80px);
+        text-decoration: none;
+        position: relative;
+
+        @include phones {
+            width: rem(60px);
+        }
+    }
+
+
+    &__trigger-text {
+        color: #fff;
+        writing-mode: tb;
+        transform: rotate(180deg);
+        margin-bottom: rem(40px);
+        font-size: rem(40px);
+    }
+
+    &__description {
+        width: rem(0px);
+        color: #fff;
+        background: rgba(0, 0, 0, .8);
+    }
+
+    &__item--active {
+        .menu__description {
+            width: rem(400px);
+
+            @include tablets {
+                width: 100%;
+            }
+        }
+
+        .menu__trigger-text {
+            color: #f9b43b;
+        }
+    }
+}

@@ -1,0 +1,207 @@
+.order {
+    background: url(../../img/bg/bg-form.png);
+    background-color: rgba(0, 0, 0, .9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+
+    @include tablets {
+        padding: 10% 5% 5% 5%;
+    }
+
+    &__container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.form {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        padding: 4% 4% 4% 4%;
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__label {
+        margin-left: rem(19px);
+        width: 100%;
+
+        @include phones {
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+
+        &-radio {
+            display: flex;
+
+            @include phones {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &-checkbox {
+            display: flex;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__label-checkbox {
+        margin-top: rem(18px);
+
+        @include phones {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        margin-top: rem(45px);
+        margin-left: rem(20px);
+
+        @include tablets {
+            margin-left: 0;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__checkbox {
+        margin-right: rem(10px);
+    }
+
+    &__textarea {
+        min-height: rem(122px);
+        resize: none;
+
+        @include tablets {
+            min-height: rem(90px);
+        }
+
+        @include phones {
+            min-height: rem(50px);
+        }
+    }
+
+    &__question {
+        display: flex;
+        position: relative;
+    }
+
+    &__label-title {
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        color: #fff;
+        padding-bottom: rem(7px);
+        margin-right: rem(20px);
+    }
+
+    &__input {
+        border: rem(2px) solid transparent;
+        border-radius: rem(4px);
+        padding: rem(11px) rem(21px);
+        margin-bottom: rem(20px);
+        outline: none;
+        width: 100%;
+
+        @include phones {
+            margin-bottom: rem(12px);
+        }
+
+        &:focus {
+            border-color: orange;
+        }
+
+        &-radio {
+            margin-right: rem(10px);
+        }
+    }
+
+    &__button {
+        margin-top: rem(19px);
+
+        @include phones {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+// radio & checkbox style
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox {
+    display: block;
+    width: rem(15px);
+    height: rem(15px);
+    background-color: #ffffff;
+    border-radius: rem(2px);
+    position: relative;
+    margin-right: rem(10px);
+}
+
+.form__checkbox:checked+.checkbox:before {
+    content: "";
+    display: block;
+    width: rem(8px);
+    height: rem(4px);
+    position: absolute;
+    border-radius: rem(2px);
+    left: rem(2px);
+    top: rem(3px);
+    border-left: rem(4px) solid #e35028;
+    border-bottom: rem(4px) solid #e35028;
+    transform: rotate(-45deg);
+}
+
+.radio-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(15px);
+    height: rem(15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin-right: rem(10px);
+}
+
+.form__input-radio:checked+.radio-btn::before {
+    content: "";
+    display: block;
+    width: rem(7px);
+    height: rem(7px);
+    position: absolute;
+    background-color: #e35028;
+    border-radius: 50%;
+}
+
+// overlay =======================================================================================================================================

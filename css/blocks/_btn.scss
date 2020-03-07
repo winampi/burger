@@ -1,0 +1,27 @@
+.btn {
+    padding: 13px 15px;
+    background-color: $red;
+    border-radius: 4px;
+    color: $white;
+    font-family: Ubuntu;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &--color {
+        &--black {
+            background-color: $black;
+            border-color: $black;
+        }
+
+        &--none {
+            border: none;
+        }
+    }
+
+    &:hover {
+        background-color: #f9b43b;
+        transition: .5s;
+    }
+}

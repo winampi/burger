@@ -1,0 +1,137 @@
+.section__footer {
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    bottom: 0;
+    padding-top: rem(10px);
+    padding-bottom: rem(12px);
+
+    &__contacts {
+
+        @include phones {
+            text-align: center;
+        }
+    }
+
+    &__adress {
+        color: $white;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+    }
+
+    &__phone {
+        color: $red;
+        font-family: "Ubuntu";
+        font-weight: 700;
+        display: block;
+        margin-top: rem(10px);
+        text-decoration: none;
+
+        @include phones {
+            margin-bottom: 2%;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    color: #fff;
+    align-items: center;
+
+    &__list {
+        margin-right: rem(20px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-container {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.block-left {
+    width: 50%;
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.block-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+
+    @include phones {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.vk {
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+
+    width: rem(23px);
+    height: rem(13px);
+    opacity: 0.3;
+}
+
+.fb {
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+
+    opacity: 0.3;
+    width: rem(20px);
+    height: rem(20px);
+}
+
+.inst {
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+
+    width: rem(20px);
+    height: rem(20px);
+    opacity: 0.3;
+}
+
+.twitter {
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+
+    width: rem(20px);
+    height: rem(16px);
+    opacity: 0.3;
+}
+
+.phone {
+
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+
+    width: rem(12px);
+    height: rem(11px);
+    margin-right: rem(8px);
+}

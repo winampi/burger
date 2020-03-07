@@ -1,0 +1,88 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+body {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+html {
+    font-size: 16px;
+    width: 100%;
+
+    @include phones {
+        font-size: 14px;
+    }
+
+    @include tablets {
+        font-size: 15px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    min-height: rem(650px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: rem(72px);
+    font-family: gagalin;
+    font-weight: 400;
+    color: $white;
+
+    @include phones {
+        font-size: rem(50px);
+    }
+
+    &--color {
+        &--black {
+            color: $black;
+        }
+
+        &--yellow {
+            color: $yellow;
+        }
+
+        &--white {
+            color: $white;
+        }
+
+
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--line-height {
+        line-height: 70px;
+    }
+}

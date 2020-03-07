@@ -1,0 +1,32 @@
+.header {
+    width: 100%;
+    position: absolute;
+    padding-top: rem(12px);
+    padding-bottom: rem(12px);
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__menu {
+        display: flex;
+        align-content: center;
+    }
+}
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// .header__menu {
+//     @include tablets {
+//         display: none;
+//     }
+// }
+
+.logo {
+    width: rem(92px);
+    height: rem(69px);
+}

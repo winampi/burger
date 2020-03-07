@@ -1,0 +1,142 @@
+.team {
+  background: url(../../img/bg/bg-team.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &__block {
+    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    width: 50%;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: 50%;
+
+    // @include phones {
+    //   text-align: center;
+    //   padding: 0;
+    // }
+
+    @include tablets {
+      padding: 0 25% 0 25%;
+      text-align: center;
+      width: 100%;
+    }
+
+    @include phones {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+.accordeon {
+  color: #fff;
+  // position: relative;
+
+  &__item {
+    margin-top: rem(35px);
+
+    @include phones {
+      margin-top: 4%;
+    }
+
+    &:first-child {
+      margin-top: rem(45px);
+    }
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-family: Gagalin;
+    font-size: rem(14px);
+    font-weight: 400;
+
+    @include tablets {
+      font-size: 25px;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(10px);
+      border: rem(5px) solid transparent;
+      border-bottom: rem(5px) solid #f9b43b;
+      margin-bottom: rem(5px);
+    }
+  }
+
+  &__pic {
+    margin-left: rem(15px);
+    margin-right: rem(21px);
+    width: rem(100px);
+    height: rem(100px);
+
+    @include tablets {
+      margin: 0 auto;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    height: rem(0px);
+    overflow: hidden;
+    margin-top: rem(17px);
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Ubuntu";
+    font-weight: 300;
+
+    @include tablets {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-size: rem(14px);
+  }
+}
+
+.accordeon__item--active .accordeon {
+  &__desc {
+    height: 100%;
+  }
+
+  &__link {
+    color: $yellow;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(10px);
+      border: rem(5px) solid transparent;
+      border-top: rem(5px) solid #f9b43b;
+      margin-bottom: rem(-5px);
+    }
+  }
+}

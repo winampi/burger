@@ -1,0 +1,89 @@
+// Navigation
+
+.nav {
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-family: Ubuntu;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 15px;
+
+        @include phones {
+            display: none;
+        }
+
+        @include tablets {
+            display: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: $white;
+            border-radius: 50%;
+            margin-right: 14px;
+            vertical-align: middle;
+        }
+
+        &:first-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.hamburger {
+    width: 24px;
+    height: 4px;
+    background: #fff;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    margin-left: 30px;
+    display: none;
+    z-index: 20;
+
+    @include tablets {
+        display: block;
+    }
+}
+
+.hamburger:after,
+.hamburger:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.hamburger:before {
+    bottom: 100%;
+    margin-bottom: 5px;
+}
+
+.hamburger:after {
+    top: 100%;
+    margin-top: 5px;
+}
